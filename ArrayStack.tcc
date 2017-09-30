@@ -8,30 +8,30 @@ ArrayStack<Object>::ArrayStack(int cap)
 
 template <typename Object>
 int ArrayStack<Object>::size() const {
-    return ??;
+    return t+1;
 }
 
 template <typename Object>
 bool ArrayStack<Object>::empty() const {
-    return ??;
+    return t==-1;
 }
 
 template <typename Object>
 const Object& ArrayStack<Object>::top() const {
     if (empty()) throw runtime_error("Stack is Empty");
-    return ??;
+    return S[t];
 }
 
 template <typename Object>
 void ArrayStack<Object>::push(const Object& e) {
     if (size() == capacity) throw runtime_error("Stack is Full");
-    ??
+    S[++t] = e;
 }
 
 template <typename Object>
 void ArrayStack<Object>::pop() {
     if (empty()) throw runtime_error("Stack is Empty");
-    ??
+    S[t--];
 }
 
 // ------------------ housekeeping functions follow --------------------
