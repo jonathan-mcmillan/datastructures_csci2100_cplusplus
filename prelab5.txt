@@ -1,0 +1,6 @@
+Prelab input:    
+2 CBALLMMACZBDDZ
+5 VWXYZWVXYZABCDEFFABCDE
+0
+
+Prelab output:
