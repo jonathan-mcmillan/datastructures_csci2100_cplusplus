@@ -4,3 +4,5 @@ Prelab input:
 0
 
 Prelab output:
+3 customer(s) walked away.
+1 customer(s) walked away.
