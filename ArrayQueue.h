@@ -31,7 +31,9 @@ class ArrayQueue
 
         // print elements of queue
         void printQ();
-
+	
+	// find an element in the queue
+	bool inQueue(Object e);
     private:
         Object* Q;      // array of queue elements
         int capacity;   // queue capacity

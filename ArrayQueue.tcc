@@ -62,3 +62,14 @@ void ArrayQueue<Object>::printQ() {
     }
     cout << endl;
 }
+
+//Check if an element is in the queue
+template <typename Object>
+bool ArrayQueue<Object>::inQueue(Object e){
+    for(int i=0; i<n; i++){
+	if(Q[i] == e){
+	    return true;
+	}
+    }
+    return false;
+}
