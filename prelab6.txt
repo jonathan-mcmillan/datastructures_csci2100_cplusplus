@@ -13,3 +13,14 @@ Elizabeth
 0
 
 Prelab Output:
+SET 1
+Bob
+Betty
+Bobby
+Bill
+SET 2
+Ed
+Eliza
+Elizabeth
+Edward
+Eddie
