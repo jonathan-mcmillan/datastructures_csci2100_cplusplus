@@ -1,0 +1,15 @@
+Prelab Input:
+4
+Bob
+Bill
+Betty
+Bobby
+5
+Ed
+Eddie
+Eliza
+Edward
+Elizabeth
+0
+
+Prelab Output:
