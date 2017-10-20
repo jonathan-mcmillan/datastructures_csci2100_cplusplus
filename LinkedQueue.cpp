@@ -43,4 +43,5 @@ void LinkedQueue<Object>::printQ(){
 		cout << LQ.front() << endl;
 		LQ.remove();
 	}
+	LQ.~CircleList();
 }
