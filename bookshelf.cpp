@@ -7,7 +7,6 @@ list<int> bookSizes;
 int currentSize = 0;
 
 void addBook(int bookNumber, int bookSize, int shelfWidth) {
-	cout << "Entered addBook" << endl;
 	currentSize = currentSize + bookSize;
 	while (currentSize > shelfWidth) {
 		currentSize = currentSize - bookSizes.front();
@@ -16,24 +15,21 @@ void addBook(int bookNumber, int bookSize, int shelfWidth) {
 	}
 	bookSizes.push_back(bookSize);
 	bookNumbers.push_back(bookNumber);
-	cout << "Added " << bookNumber << endl;
 }
 
 void removeBook(int bookNumber) {
-	cout << "Entered removeBook" << endl;
 	list<int>::iterator it1, it2;
 	it1 = bookSizes.begin();
 	it2 = bookNumbers.begin();
 
 	if(find(bookNumbers.begin(), bookNumbers.end(), bookNumber) != bookNumbers.end()){
+		cout << "Book is in bookNumbers" << endl;
 		while (true) {
 			if (*it1 == bookNumber) {
+				cout << "Found book" << endl;
 				it1 = bookNumbers.erase(it1);
 				currentSize = currentSize - *it2;
 				it2 = bookSizes.erase(it2);
-				break;
-			}
-		 	if(*it1 == bookNumbers.back()){
 				break;
 			}
 			else{
@@ -42,17 +38,18 @@ void removeBook(int bookNumber) {
 			}
 		}
 	}
-	cout << "Left removeBooks" << endl;
+	cout << "Left removeBook" << endl;
 }
 
 void printReset() {
-	cout << "Entered printReset" << endl;
+	
 	while (!bookNumbers.empty()) {
-		cout << bookNumbers.back();
+		cout << bookNumbers.back() << " ";
 		bookNumbers.pop_back();
 		bookSizes.pop_back();
 	}
 	currentSize = 0;
+	cout << endl;
 }
 
 int main() {
