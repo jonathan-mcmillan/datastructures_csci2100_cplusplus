@@ -4,6 +4,7 @@
 using namespace std;
 list<int> bookNumbers;
 list<int> bookSizes;
+list<int> bookAlreadyOn;
 int currentSize = 0;
 
 void addBook(int bookNumber, int bookSize, int shelfWidth) {
@@ -22,30 +23,13 @@ void removeBook(int bookNumber) {
 	list<int>::iterator it2;
 	for(it2 = bookNumbers.begin(); it2 != bookNumbers.end(); it2++){
 		if(*it2 == bookNumber){
-			cout << "Found Book" << endl;
-			it2 = bookNumbers.erase(it2)
+			it2 = bookNumbers.erase(it2);
 			currentSize = currentSize - *it1;
 			it1 = bookSizes.erase(it1);
 			break;
 		}
 		it1++;
 	}
-	//if(find(bookNumbers.begin(), bookNumbers.end(), bookNumber) != bookNumbers.end()){
-	//	cout << "Book is in bookNumbers" << endl;
-	//	while (true) {
-	//		if (*it1 == bookNumber) {
-	//			cout << "Found book" << endl;
-	//			it1 = bookNumbers.erase(it1);
-	//			currentSize = currentSize - *it2;
-	//			it2 = bookSizes.erase(it2);
-	//			break;
-	//		}
-	//		else{
-	//			it1++;
-	//			it2++;
-	//		}
-	//	}
-	cout << "Left removeBook" << endl;
 }
 
 void printReset() {
