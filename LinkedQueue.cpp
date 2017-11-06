@@ -19,6 +19,9 @@ bool LinkedQueue<Object>::empty() const{
 
 template <typename Object>
 const Object& LinkedQueue<Object>::front() const{
+	if(empty()){
+		throw QueueEmpty("front of empty queue");
+	}
 	return C.front();
 }
 
