@@ -1,55 +1,28 @@
 #include <iostream>
 #include <algorithm>
+
 using namespace std;
 
-
-void BubbleSort([] A,int n ){
-        for(int i = 0; i < n-1; i++){
-                int iMin = i;
-                for(int j = 0; j< n-i-1; j++){
-                        if(A[j] >  A[i+1]){
-                                swap(A[i], A[i+1]);
-                        }
-                }
-        }
+void SelectionSort(int A[], int n){
+	for(int i = 0; i < n-2; i++){
+		int iMin = i;
+		for(int j = i + 1; j < n - 1; j++){
+			if(A[j] < A[iMin]){
+				iMin = j;
+			}
+			swap(&A[iMin],&A[i]);
+		}
+	}
 }
 
-int main()
-{
-    int A[] = {2, 7, 4, 1, 5, 3};
-    cout << "Selection Sorting..." << endl;
-    SelectionSort(A, 6);
-    for (int i=0; i<6; i++)
-        cout << A[i] << " ";
-    cout << endl << endl;
-    
-    int B[] = {12, 17, 14, 11, 15, 13};
-    cout << "Bubble Sorting..." << endl;
-    BubbleSort(B, 6);
-    for (int i=0; i<6; i++)
-        cout << B[i] << " ";
-    cout << endl << endl;
-    
-    cout << "Insertion Sorting..." << endl;
-    int C[] = {22, 27, 24, 21, 25, 23};
-    InsertionSort(C, 6);
-    for (int i=0; i<6; i++)
-        cout << C[i] << " ";
-    cout << endl << endl;
-    
-    cout << "Merge Sorting..." << endl;
-    int D[] = {22, 27, 24, 21, 25, 23, 26, 28};
-    MergeSort(D, 0, 7);
-    for (int i=0; i<8; i++)
-        cout << D[i] << " ";
-    cout << endl << endl;
-    
-    cout << "Quick Sorting..." << endl;
-    int E[] = {32, 37, 34, 31, 35, 33, 36, 38};
-    QuickSort(E, 0, 7);
-    for (int i=0; i<8; i++)
-        cout << E[i] << " ";
-    cout << endl << endl;
-    
-    return 0;
+int main(){
+	int A[] = {2,7,4,1,5,3};
+	cout << "Selection Sorting..." << endl;
+	SelectionSort(A, 6);
+	for(int i = 0; i < 6; i++){
+		cout << A[i] << " ";
+	}
+	cout << endl << endl;
+
+	return 0;
 }
