@@ -6,8 +6,14 @@ mada adam
 
 Prelab output:
 Output for long nice
-[]
+[
+]
 Output for eric rice
-[++-+-+--]
+[
+++-+-+--
+]
 Output for mada adam
-[++-+-+--]
+[
+++-+-+--
+++++----
+]
