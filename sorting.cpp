@@ -64,6 +64,7 @@ int main(){
 	for (int i = 0; i<6; i++){
 		cout << C[i] << " ";
 	}	
-	cout << endl << endl;
+	cout << endl << endl;	
+
 	return 0;
 }
