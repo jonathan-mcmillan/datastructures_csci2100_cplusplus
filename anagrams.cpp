@@ -4,19 +4,16 @@
 using namespace std;
 
 stack<string> solutions;
+
 void solve(string goal, string intial, string curSeq, string output,string moves){
-	cout << string(3*moves.size(),' ') << "solve(" << goal << ", " << intial << ", " << curSeq << ", " << output << ", " << moves << ")" << endl;
-	cin.get();
 	if(goal == output){
 		solutions.push(moves);
 	}
-	else{
-		if(intial.length() > 0){ //pop
-			solve(goal,intial.substr(1) ,(curSeq+=intial[0]),output ,(moves+="+"));
-		}
-		if(curSeq.length() > 0){ //push
-			solve(goal, intial, curSeq.substr(0, curSeq.length()-1), (output+=curSeq.substr(curSeq.length()-1)),(moves+="-") ); 
-		}
+	if(intial.length() > 0){ //pop
+		solve(goal, intial.substr(1,intial.length()-1), (curSeq+intial[0]), output, (moves+"+"));
+	}
+	if(curSeq.length() > 0){ //push
+		solve(goal, intial, curSeq.substr(0, curSeq.length()-1), (output+curSeq[curSeq.length()-1]), (moves+="-"));
 	}
 }
 
