@@ -49,6 +49,15 @@ Inputs:
            / \
           2   100
 
+Hints:
+Possible approach 1: 
+ - For each node, check if max value in left subtree is smaller than the node and min value in right subtree greater than the node.
+ - The recursive call makes sure that subtree nodes are within the range of its ancestors, which is important.
+
+Possible approach 2:
+ - Do inorder Traversal and check the value.
+ - An inorder traversal already gives you the values in the order they would appear, so you don't need to copy the whole tree, you just need to keep track of the last value encountered, so it can be compared with the current one. 
+
 -----------
 Git info:
 -----------
