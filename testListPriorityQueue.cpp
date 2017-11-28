@@ -5,7 +5,7 @@ using namespace std;
 
 class IsLess {
 public:
-
+	bool operator()(const
 };
 
 int main() {
