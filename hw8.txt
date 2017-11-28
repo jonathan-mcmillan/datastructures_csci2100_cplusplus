@@ -1,0 +1,64 @@
+================================================================================
+CSCI 2100: Data Structures, Fall 2017
+Homework 7
+================================================================================
+Due via git by 11:59pm on Monday, Dec. 4
+
+This is a homework you must complete individually.
+
+You completed the LinkedBinaryTree.h, LinkedBinaryTree.cpp, and testLinkedBinaryTree.cpp.
+You need to implement a new function isBST() to check if a binary tree is a binary search tree (BST) or not.
+A binary search tree (BST) is a node based binary tree data structure which has the following properties.
+- The left subtree of a node contains only nodes with keys less than the node’s key.
+- The right subtree of a node contains only nodes with keys greater than the node’s key.
+- Both the left and right subtrees must also be binary search trees.
+
+Assumptions:
+- Tree data type is numeric.
+
+In the main(), just check as below:
+
+    if (tree.isBST())
+        cout << endl << "Tree is BST" << endl;
+    else
+        cout << endl << "Tree is not BST" << endl;
+
+Submit all source files including
+- LinkedBinaryTree.h
+- LinkedBinaryTree.cpp
+- testLinkedBinaryTree.cpp
+- hw8.output
+
+hw8.output file should include output of below two inputs:
+
+Inputs:
+
+                 9
+               /   \
+              7     11
+             / \    / \
+            3   8  10  14
+           / \
+          2   5
+
+                 9
+               /   \
+              7     11
+             / \    / \
+            3   8  10  14
+           / \
+          2   100
+
+-----------
+Git info:
+-----------
+$ git fetch origin
+$ git checkout -b hw8 origin/hw8
+
+Complete and commit the assignment
+$ git add LinkedBinaryTree.h
+$ git add LinkedBinaryTree.cpp
+$ git add testLinkedBinaryTree.cpp
+$ git add hw8.output
+$ git commit -m "hw8 submit"
+$ git push my hw8
