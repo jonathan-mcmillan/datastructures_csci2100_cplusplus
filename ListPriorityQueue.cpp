@@ -10,7 +10,7 @@ bool ListPriorityQueue<E,C>::empty() const {
 
 template <typename E, typename C> // insert element
 void ListPriorityQueue<E,C>::insert(const E& e) {
-	typename std::list::iterator p;
+	typename std::list<E>::iterator p;
 	p = L.begin();
 	while(p != L.end() && !IsLess(e, *p)){
 		++p;

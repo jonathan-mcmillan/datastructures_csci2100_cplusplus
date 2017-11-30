@@ -5,17 +5,17 @@
 
 using namespace std;
 
-template <typename E, typename C>
+template<typename E, typename C> 
 class ListPriorityQueue {
 public:
-	int size() const;
-	bool empty() const;
-	void insert(const E& e);
-	const E& min() const;
-	void removeMin();
+    	int size() const;       
+    	bool empty() const;     
+    	void insert(const E& e);
+    	const E& min() const;   
+    	void removeMin();       
 private:
-	std::list L;
-	C isLess;
+	std::list<E> L;
+   	C IsLess;
 };
 
 #include "ListPriorityQueue.cpp"

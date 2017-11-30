@@ -5,7 +5,10 @@ using namespace std;
 
 class IsLess {
 public:
-	bool operator()(const
+	bool operator()(const int p, const int q){
+		if(p < q)	return true;
+		else		return false;
+	}	
 };
 
 int main() {
