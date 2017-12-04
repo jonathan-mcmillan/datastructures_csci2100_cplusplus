@@ -1,0 +1,8 @@
+Prelab input:
+dddududuuu
+dduudduduu
+duddduduuu
+#
+
+Prelab output:
+
