@@ -3,13 +3,15 @@
 
 #include <iostream>
 #include <list>
+#include <queue>
 
 using namespace std;
 
 template <typename Object>
-class LinkedBinaryTree{
+class LinkedBinaryTree {
 
 protected:
+
 	struct Node{
 		Object elem;
 		Node* parent;
@@ -27,11 +29,11 @@ public:
 		Position(Node* _v = NULL) : v(_v) { }
 		Object& operator*() { return v -> elem; }
 		Position left() const { return Position(v->left); }
-		Position right() const { return Position(v->right); }
+		Position right() const { return Position(v-> right); }
 		Position parent() const { return Position(v->parent); }
-		bool isRoot() const { return v->parent == NULL; }
+		bool isRoot() const { return v-> parent == NULL; }
 		bool isExternal() const { return v->left == NULL && v->right == NULL; }
-		bool isNULL() { return (v == NULL); }
+		bool isNull() {return (v == NULL); }
 		friend class LinkedBinaryTree;
 	};
 
@@ -39,6 +41,7 @@ public:
 	LinkedBinaryTree();
 	int size() const;
 	bool empty() const;
+	bool isBST() const;
 	Position root() const;
 	void addRoot(const Object& value = Object());
 	void addLeftLeaf(const Position& p, const Object& value);
@@ -47,14 +50,16 @@ public:
 	void inorderPrint() const;
 	void postorderPrint() const;
 	void expandExternal(const Position& p);
-	Position removeAboveExteranl(const Position& p);
+	Position removeAboveExternal(const Position& p);
 
 protected:
 
 private:
-	void preorder(const Node* v)const;
+	void preorder(const Node* v) const;
 	void inorder(const Node* v) const;
 	void postorder(const Node* v) const;
+	void inorderQueue(const Node* v) const;
+	queue<int> inorderQ;
 	Node* _root;
 	int n;
 };

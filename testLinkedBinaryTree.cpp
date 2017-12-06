@@ -42,4 +42,21 @@ int main(){
 	
 	cout << endl << "Postorder tree 2: " << endl;
 	tree2.postorderPrint();
+
+	cout << endl << "Is tree 1 a binary tree?" << endl;
+	if(tree1.isBST()){
+		cout << endl << "Tree is BST" << endl;
+	}
+	else{
+		cout << endl << "Tree is not BST" << endl;
+	}
+
+	cout << endl << "Is tree 2 a binary tree?" << endl;
+        if(tree2.isBST()){
+                cout << endl << "Tree is BST" << endl;
+        }
+        else{
+                cout << endl << "Tree is not BST" << endl;
+        }
+
 }
