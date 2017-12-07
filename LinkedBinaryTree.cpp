@@ -15,15 +15,20 @@ bool LinkedBinaryTree<Object>::empty() const
 }
 
 template <typename Object>
-bool LinkedBinaryTree<Object>::isBST() const
+bool LinkedBinaryTree<Object>::isBST(const Node* v) const
 {
-	inorderQueue(_root);
-	int n = 0;
+	int num = 0;
+	inorderQueue(v);
 	while(!inorderQ.empty()){
-		if(inorderQ.front() < n){
+		if(num == 0){
+			num = inorderQ.front();
+		}
+		else if(inorderQ.front() < num){
 			return false;
 		}
-		n = inorderQ.front();
+		else{
+			num = inorderQ.front();
+		}
 		inorderQ.pop();
 	}
 	return true;
@@ -98,7 +103,7 @@ void LinkedBinaryTree<Object>::inorderQueue(const Node* v)
 {
 	if(v == NULL) return;
 	inorder(v -> left);
-	inorderQ.push(nt(v -> elem));
+	inorderQ.push(int(v -> elem));
 	inorder(v -> right);
 }
 
