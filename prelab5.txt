@@ -1,0 +1,8 @@
+Prelab input:    
+2 CBALLMMACZBDDZ
+5 VWXYZWVXYZABCDEFFABCDE
+0
+
+Prelab output:
+3 customer(s) walked away.
+1 customer(s) walked away.
