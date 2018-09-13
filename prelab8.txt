@@ -1,0 +1,19 @@
+Prelab input:
+3
+long nice
+eric rice
+mada adam
+
+Prelab output:
+Output for long nice
+[
+]
+Output for eric rice
+[
+++-+-+--
+]
+Output for mada adam
+[
+++-+-+--
+++++----
+]
